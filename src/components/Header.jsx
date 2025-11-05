@@ -36,12 +36,12 @@ const Header = () => {
             className="md:hidden text-white text-3xl"
             onClick={() => setOpen(!open)}
           >
-            {open ? "✖" : "☰"}
+            <i className={open ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
           </button>
         </div>
 
         <div
-          className={`md:hidden bg-[#6f8f9a] px-4 pb-4 transform transition-transform duration-300 ${
+          className={`md:hidden fixed top-0 left-0 h-[70vh] w-[70%] bg-[#5e7b85] px-4 pt-16 transform transition-transform duration-300 z-40 ${
             open ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
           }`}
         >
@@ -61,6 +61,13 @@ const Header = () => {
             Консультация
           </button>
         </div>
+
+        {open && (
+          <div
+            className="md:hidden fixed top-0 left-[70%] h-[70vh] w-[30%] bg-black/30 z-30"
+            onClick={() => setOpen(false)}
+          ></div>
+        )}
       </div>
     </header>
   );
