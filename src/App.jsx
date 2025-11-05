@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Showcase from "./components/Showcase";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
+import Highlights from "./components/Highlights";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Showcase />
       <Navbar />
       <About />
+      <Highlights />
     </div>
   );
 };
